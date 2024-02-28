@@ -30,7 +30,7 @@
                 <h4 class="header-subtitle">Hello, I am</h4>
                 <h1 class="header-title">Unmukt Jain</h1>
                 <h6 class="header-mono">Web Developer</h6>
-                <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
+                <a target="_blank" href="assets/unmukt-cv.pdf" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</a>
             </div>
         </div>
     </header>
@@ -62,10 +62,7 @@
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="#portfolio" class="nav-link">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#blog" class="nav-link">Blog</a>
+                        <a href="#blog" class="nav-link">My Projects</a>
                     </li>
                     <li class="nav-item last-item">
                         <a href="#about" class="nav-link">Contact</a>
@@ -340,7 +337,7 @@
             <div class="row">
                 <div class="blog-card">
                     <div class="content-holder">
-                        <h7 class="title">Causelist Management System</h7>
+                        <h7 class="title text-danger">Causelist Management System</h7>
                         <br>
                         <b>Purpose</b>: Guide complainants to the correct courtroom within the Rera MP office building
                         by
@@ -391,35 +388,35 @@
                         </ul>
                         <div class="row">
                             <div class="col-lg-4">
-                                <img src="https://raw.githubusercontent.com/unmukt25/pub_rera_causelist/main/user%20screens/login.png"
+                                <img class="image-item" src="https://raw.githubusercontent.com/unmukt25/pub_rera_causelist/main/user%20screens/login.png"
                                     style="width: 100%;" alt="project screenshots ">
                             </div>
                             <div class="col-lg-4 p-1">
-                                <img src="https://raw.githubusercontent.com/unmukt25/pub_rera_causelist/main/user%20screens/dashboard.png"
+                                <img class="image-item" src="https://raw.githubusercontent.com/unmukt25/pub_rera_causelist/main/user%20screens/dashboard.png"
                                     style="width: 100%;" alt="project screenshots ">
                             </div>
                             <div class="col-lg-4 p-1">
-                                <img src="https://raw.githubusercontent.com/unmukt25/pub_rera_causelist/main/user%20screens/add-form.png"
+                                <img class="image-item" src="https://raw.githubusercontent.com/unmukt25/pub_rera_causelist/main/user%20screens/add-form.png"
                                     style="width: 100%;" alt="project screenshots ">
                             </div>
                             <div class="col-lg-4 p-1">
-                                <img src="https://raw.githubusercontent.com/unmukt25/pub_rera_causelist/main/user%20screens/delete.png"
+                                <img class="image-item" src="https://raw.githubusercontent.com/unmukt25/pub_rera_causelist/main/user%20screens/delete.png"
                                     style="width: 100%;" alt="project screenshots ">
                             </div>
                             <div class="col-lg-4 p-1">
-                                <img src="https://raw.githubusercontent.com/unmukt25/pub_rera_causelist/main/user%20screens/publish%20list.png"
+                                <img class="image-item" src="https://raw.githubusercontent.com/unmukt25/pub_rera_causelist/main/user%20screens/publish%20list.png"
                                     style="width: 100%;" alt="project screenshots ">
                             </div>
 
                         </div>
-                        <a href="https://github.com/unmukt25/pub_rera_causelist">To checkout the source code click
+                        <a target="_blank" href="https://github.com/unmukt25/pub_rera_causelist">To checkout the source code click
                             here...</a>
                     </div>
                 </div><!-- end of blog wrapper -->
 
                 <div class="blog-card">
                     <div class="content-holder">
-                        <h7 class="title">Stock Management System</h7>
+                        <h7 class="title text-danger">Stock Management System</h7>
                         <br>
                         <b>Purpose</b>: Electronically maintains the records of stock items when purchasing and
                         issueing.
@@ -464,24 +461,26 @@
                         </ul>
                         <div class="row">
                             <div class="col-lg-4 p-1">
-                                <img src="assets/imgs/stock-home.png"
+                                <img class="image-item" src="assets/imgs/stock-home.png"
                                     style="width: 100%;" alt="project screenshots ">
                             </div>
                             <div class="col-lg-4 p-1">
-                                <img src="assets/imgs/stock-addNewItem.png"
+                                <img class="image-item" src="assets/imgs/stock-addNewItem.png"
                                     style="width: 100%;" alt="project screenshots ">
                             </div>
                             <div class="col-lg-4 p-1">
-                                <img src="assets/imgs/stock-login.png"
+                                <img class="image-item" src="assets/imgs/stock-login.png"
                                     style="width: 100%;" alt="project screenshots ">
                             </div>
                             
                         </div>
-                        <a href="https://github.com/unmukt25/pub_rera_causelist">To checkout the source code click
-                            here...</a>
+                        <a target="_blank" href="https://main.dtgq42p9nzx87.amplifyapp.com/">Live Demo...</a>
                     </div>
                 </div><!-- end of blog wrapper -->
 
+                <div class="large-image-container hidden">
+                    <img src="" alt="" class="large-image">
+                </div>
 
             </div>
         </div>
@@ -514,6 +513,25 @@
     <!-- JohnDoe js -->
     <script src="assets/js/johndoe.js"></script>
 
+    <!-- script to image gallary show / hide  -->
+    <script>
+        const imageItems = document.querySelectorAll('.image-item');
+        const largeImageContainer = document.querySelector('.large-image-container');
+        const largeImage = document.querySelector('.large-image');
+
+        imageItems.forEach(imageItem => {
+            imageItem.addEventListener('click', () => {
+                largeImage.src = imageItem.src;
+                largeImageContainer.classList.remove('hidden');
+            });
+        });
+
+        largeImageContainer.addEventListener('click', () => {
+            largeImage.src = "";
+            largeImageContainer.classList.add('hidden');
+        });
+
+    </script>
 </body>
 
 </html>
